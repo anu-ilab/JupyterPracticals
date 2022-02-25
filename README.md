@@ -20,7 +20,7 @@ This set of practicals depends on a Python package `anu-inversion-course` (sourc
 It's recommended to use an isolated environment to install the above package and run the notebooks:
 
 ```bash
-conda create -n inversion_course jupyterlab pip -y
+conda create -n inversion_course jupyterlab scipy pip -y
 conda activate inversion_course
 pip install anu-inversion-course
 ```
