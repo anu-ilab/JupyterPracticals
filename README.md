@@ -14,7 +14,7 @@ This is a part of the inversion course in ANU. You can either run the notebooks 
 
 1. From GitHub, navigate to the notebook you'd like to run
 2. Click on the "Open on Colab" badge at the top of the notebook
-3. Within Colab, uncomment the line  `!pip install -U anu-inversion-course` and run this line
+3. Within Colab, uncomment the code block with  `!pip install -U anu-inversion-course` and run this block
 4. Run the rest of the notebook as normal
 5. There are several options if you'd like to save your changes. To do this, click "File" (on top left of Colab page) -> "Save a copy...", or "Download".
 
