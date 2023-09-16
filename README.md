@@ -37,7 +37,7 @@ Before installing the `ANU-inversion-course` package, make sure you have the fol
     1. Download and install `Xcode` from "App Store" (you'll need to create an Apple account if not already done)
     2. Install the Xcode command line tools by typing this in "Terminal":
        `xcode-select --install; sudo xcodebuild -license; sudo softwareinstall -i -a`
-    4. Install a recent package manager e.g. one of `Anaconda` (https://www.anaconda.com/), `MacPorts` (https://www.macports.org/), `HomeBrew` (https://brew.sh/)
+    4. Install a recent package manager e.g. one of `HomeBrew` (https://brew.sh/), `Anaconda` (https://www.anaconda.com/), `MacPorts` (https://www.macports.org/)
   - For *Windows* users:
     1. Install the `Cygwin` package manager (https://www.cygwin.com/)
 - Install git, gcc, g++, gfortran and python (3.6+) using the package manager. Use the package manager search facility to find options.
@@ -123,6 +123,32 @@ Type the following in your terminal (or Cygwin shell for Windows users):
 ```console
 $ pip install jupyterlab matplotlib anu-inversion-course
 ```
+
+</details>
+
+<details>
+  <summary>Troubleshooting installation</summary>
+
+  If you run into an error while running the above command, try the following:
+
+  ```console
+  $ pip install jupyterlab matplotlib
+  $ pip install anu-inversion-course
+  ```
+
+  If you see any error while running the first command, try to search for the error you see
+  on Google/DuckDuckGo/ChatGPT.
+
+  If you see an error while running the second command, (ctrl/cmd + f) search `error` from
+  your terminal history to locate which error is causing the installation failure.
+
+  - If the error is about `cannot find a Fortran compiler`, and if you are sure you have installed
+    a Fortran compiler as per [instructions](README.md#1-get-the-dependencies) above:
+    - The Fortran compiler could be in `/opt/local/bin/` but has a versioned name like `gfortran-mp-12`,
+      so you can confirm this with `ls /opt/local/bin/gfortran*` and then create a symbolic link
+      to get around the error with: `sudo ln -s /opt/local/bin/gfortran-mp-12 /opt/local/bin/gfortran`.
+
+</details>
 
 ### 2. Get the notebooks
 
